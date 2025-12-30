@@ -177,6 +177,9 @@
   --radius-3xl: calc(var(--radius) + 0.75rem);
   --radius-4xl: calc(var(--radius) + 1rem);
   
+  /* Border Color - Must be defined for border-border utility */
+  --color-border: hsl(var(--border));
+  
   /* Shadows - Luxury Depth */
   --shadow-color: 240 5% 3.9%;
   --shadow-opacity: 0.08;
@@ -194,7 +197,7 @@
   --shadow-xl: 0 24px 32px -8px hsl(var(--shadow-color) / calc(var(--shadow-opacity) * 2));
   --shadow-2xl: 0 32px 48px -12px hsl(var(--shadow-color) / calc(var(--shadow-opacity) * 3));
   
-  /* Color Tokens for Tailwind */
+  /* Color Tokens for Tailwind v4 */
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
   --color-card: hsl(var(--card));
@@ -214,6 +217,9 @@
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
+  
+  /* Ensure border color is accessible for border utilities */
+  --border-color: var(--color-border);
   
   /* Chart Colors - Luxury Palette */
   --color-chart-1: hsl(12 68% 75%);
